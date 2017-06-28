@@ -1,4 +1,4 @@
-# AVRUtils [![Build Status](https://travis-ci.org/sconaway/avrutils.svg?branch=master)](https://travis-ci.org/Sconaway/AVRUtils)
+# AVRUtils [![Build Status](https://travis-ci.org/SConaway/AVRUtils.svg?branch=master)](https://travis-ci.org/SConaway/AVRUtils)
 
 
 This is a simple Arduino library to check the internal temperature of an AVR and measure the voltage supplied on `Vcc`.
