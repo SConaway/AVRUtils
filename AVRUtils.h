@@ -23,6 +23,8 @@
 #include <Arduino.h>
 class AVRUtils {
 	public:
+
+
 		/**
 		 * Creates an instance to monitor battery voltage and level.
 		 *
