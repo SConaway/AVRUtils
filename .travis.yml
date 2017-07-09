@@ -40,6 +40,3 @@ env:
  - BOARD=arduino:avr:bt:cpu=atmega328
 # - BOARD=arduino:avr:lilypad:cpu=atmega168
  - BOARD=arduino:avr:lilypad:cpu=atmega328
-# - BOARD=arduino:avr:pro:cpu=atmega168
- - BOARD=arduino:avr:pro
-# - BOARD=arduino:sam:arduino_due_x
