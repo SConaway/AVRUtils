@@ -8,22 +8,22 @@ before_install:
   - tar xf arduino-1.8.5-linux64.tar.xz
   - sudo mv arduino-1.8.5 /usr/local/share/arduino
   - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
-  
+
 install:
   - ln -s $PWD /usr/local/share/arduino/libraries/AVRUtils
-  
+
 script:
   - arduino --verify --board ${BOARD} $PWD/examples/AVRUtils/AVRUtils.ino
-  
+
 notifications:
   email:
     on_success: change
     on_failure: change
-    
+
 env:
  - BOARD=arduino:avr:uno
 # - BOARD=arduino:avr:yun
-# - BOARD=arduino:avr:diecimila:cpu=atmega168
+ - BOARD=arduino:avr:diecimila:cpu=atmega168
  - BOARD=arduino:avr:diecimila:cpu=atmega328
 # - BOARD=arduino:avr:nano:cpu=atmega168
  - BOARD=arduino:avr:nano:cpu=atmega328
