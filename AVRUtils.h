@@ -21,36 +21,31 @@
 #define _AVRUTILS_
 
 #include <Arduino.h>
+
 class AVRUtils {
 	public:
 
 
 		/**
-		 * Creates an instance to monitor battery voltage and level.
-		 *
-		 * @param minVoltage is the voltage, expressed in millivolts, corresponding to an empty battery
-		 * @param maxVoltage is the voltage, expressed in millivolts, corresponding to a full battery
-		 * @param sensePin is the analog pin used for sensing the battery voltage
-		 * @param activationPin is the optional digital pin which will be turned LOW before starting the battery sensing,
-		 *            useful when using a resistor divider to save on battery consumption
+		 * Creates an instance to monitor voltage and temperature.
 		 */
 		AVRUtils(void);
 
 		/**
-		 * Initializes the library by optionally setting the board voltage level, expressed in millivolts, (defaults to 5000)
-		 * and the resistor divider ratio (defaults to 2, an equal divider).
-		 * To obtain the best results use a calibrated reference using the VoltageReference library or equivalent.
+		 * Initializes the library by optionally setting the AVR's temperature correction factor,
+		 * and the AVR's voltage correction factor.
 		 */
 		void begin(double AVRTempCorr = 324.31, double AVRVccCorr = 1125300L);
 
 		/**
-		 * Returns the current battery level as a number between 0 and 100, with 0 indicating an empty battery and 100 a
-		 * completely full battery.
+		 * Returns the current temperature in Celsius.
 		 */
 		double getAVRTemp(void);
 
 		/**
 		 * Returns the current battery voltage in millivolts.
+		/**
+		 * Returns the current voltage in millivolts.
 		 */
 		double getAVRVcc(void);
 
