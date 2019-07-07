@@ -65,7 +65,11 @@ double AVRUtils::getAVRTemp(void) {
     }
     average /= 100;
     average = (average - AVRTempCorr ) / 1.22;
-    return (1.8 * average) + 32;
+    return average;
+}
+
+double AVRUtils::getAVRTempF(void) {
+    return (getAVRTemp() * 1.8) + 32;
 }
 
 double AVRUtils::getAVRVcc(void) {

@@ -43,7 +43,10 @@ class AVRUtils {
 		double getAVRTemp(void);
 
 		/**
-		 * Returns the current battery voltage in millivolts.
+		 * Returns the current temperature in Fahrenheit.
+		 */
+		double getAVRTempF(void);
+
 		/**
 		 * Returns the current voltage in millivolts.
 		 */

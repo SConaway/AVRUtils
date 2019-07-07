@@ -16,7 +16,9 @@ void loop() {
 
     Serial.print(F("AVR temp is "));
     Serial.print(avr.getAVRTemp());
-    Serial.println(F(" *F"));
+    Serial.println(F(" *C "));
+    Serial.print(avr.getAVRTempF());
+    Serial.println(F(" *F "));
     Serial.print(F("AVR Vcc is "));
     Serial.print(avr.getAVRVcc());
     Serial.println(F(" mV"));
